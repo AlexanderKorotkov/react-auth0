@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import AddUser from './components/Users/AddUser';
-import UsersList from './components/Users/UsersList';
+import Layout from './components/Layout/Layout';
+import UserProfile from './components/Profile/UserProfile';
+import AuthPage from './pages/AuthPage';
+import HomePage from './pages/HomePage';
 
 function App() {
-  const [usersList, setUsersList] = useState([]);
-
-  const addUserHandler = (uName, uAge) => {
-    setUsersList((prevUsersList) => {
-      return [
-        ...prevUsersList,
-        { name: uName, age: uAge, id: Math.random().toString() },
-      ];
-    });
-  };
-
   return (
-    <div>
-      <AddUser onAddUser={addUserHandler} />
-      <UsersList users={usersList} />
-    </div>
+    <Layout>
+      <Switch>
+        <Route path='/' exact>
+          <HomePage />
+        </Route>
+        <Route path='/auth'>
+          <AuthPage />
+        </Route>
+        <Route path='/profile'>
+          <UserProfile />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 
