@@ -5,8 +5,8 @@ import MainNavigation from './MainNavigation';
 const Layout = (props) => {
   return (
     <Fragment>
-      <MainNavigation />
-      <main>{props.children}</main>
+      {/*<MainNavigation />*/}
+      <main className='h-screen overflow-hidden flex items-center justify-center'>{props.children}</main>
     </Fragment>
   );
 };
