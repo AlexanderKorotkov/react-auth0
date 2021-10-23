@@ -15,6 +15,7 @@ function App() {
         <Route path='/' exact>
           <HomePage />
         </Route>
+
         <Route path={['/login', '/signUp', '/forgotPassword']}>
           <AuthPage />
         </Route>

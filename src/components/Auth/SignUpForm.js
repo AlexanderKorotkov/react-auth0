@@ -1,9 +1,9 @@
-import React from 'react';
-import { useState, useRef, useContext } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import AuthContext from '../../store/auth-context';
 
 const SignUpForm = () => {
+  const minLength = 6;
   const history = useHistory();
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
@@ -86,7 +86,7 @@ const SignUpForm = () => {
           type='password'
           id='password'
           placeholder='Enter Password'
-          minLength='6'
+          minLength={minLength}
           className='w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none'
           required
@@ -101,7 +101,7 @@ const SignUpForm = () => {
           type='password'
           id='repeat-password'
           placeholder='Repeat Password'
-          minLength='6'
+          minLength={minLength}
           className='w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                 focus:bg-white focus:outline-none'
           required
