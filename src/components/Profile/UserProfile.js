@@ -1,7 +1,9 @@
+import React from 'react';
 import ProfileForm from './ProfileForm';
 import classes from './UserProfile.module.css';
 
 const UserProfile = () => {
+  console.log(123);
   return (
     <section className={classes.profile}>
       <h1>Your User Profile</h1>

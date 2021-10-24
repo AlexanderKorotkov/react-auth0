@@ -19,7 +19,8 @@ module.exports = {
       gray: colors.trueGray,
       indigo: colors.indigo,
       red: colors.rose,
-      yellow: colors.amber,
+      yellow: colors.yellow,
+      green: colors.green,
       blue: colors.blue,
       blackLight: '#161616',
     },
@@ -38,7 +39,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+      backgroundColor: ['disabled'],
+      cursor: ['disabled'],
+    },
   },
   plugins: [],
 };
