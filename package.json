@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
-    "eslint": "^5.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",

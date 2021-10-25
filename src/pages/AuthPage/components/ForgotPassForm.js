@@ -4,8 +4,8 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import AuthContext from 'store/auth-context';
 import * as Yup from 'yup';
-import AuthContext from '../../store/auth-context';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 

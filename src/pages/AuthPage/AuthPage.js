@@ -1,10 +1,10 @@
 import React, { useEffect, useReducer } from 'react';
 import { useLocation } from 'react-router-dom';
-import ForgotPassForm from '../components/Auth/ForgotPassForm';
-import LoginForm from '../components/Auth/LoginForm';
-import SignUpForm from '../components/Auth/SignUpForm';
-import AuthWrapper from '../components/Auth/AuthWrapper';
-import logo from '../assets/img/logo.jpg';
+import logo from '../../assets/img/logo.jpg';
+import AuthWrapper from './components/AuthWrapper';
+import ForgotPassForm from './components/ForgotPassForm';
+import LoginForm from './components/LoginForm';
+import SignUpForm from './components/SignUpForm';
 
 const authPageReducer = (state, action) => {
   switch (action.type) {

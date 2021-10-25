@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import React from 'react';
 import AuthFooter from './AuthFooter';
 import classes from './AuthWrapper.module.css';
 

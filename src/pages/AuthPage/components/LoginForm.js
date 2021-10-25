@@ -4,8 +4,8 @@ import React from 'react';
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import AuthContext from 'store/auth-context';
 import * as Yup from 'yup';
-import AuthContext from '../../store/auth-context';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -65,7 +65,7 @@ const LoginForm = () => {
                 type='password'
                 id='password'
                 placeholder='Enter Password'
-                className='basic-input'
+                className='basic-input color'
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.password}

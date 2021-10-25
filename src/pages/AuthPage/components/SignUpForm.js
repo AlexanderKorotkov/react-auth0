@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Link } from 'react-router-dom';
-import AuthContext from '../../store/auth-context';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import AuthContext from 'store/auth-context';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
