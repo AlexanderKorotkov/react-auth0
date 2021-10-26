@@ -8,13 +8,16 @@ import Layout from './layout/Layout';
 import AuthPage from './pages/AuthPage/AuthPage';
 import 'react-toastify/dist/ReactToastify.css';
 import DashboardPage from 'pages/DashboardPage/DashboardPage';
+import ContentLayout from 'layout/ContentLayout';
 
 function App() {
   return (
     <Layout>
       <Switch>
         <PublicRoute path={['/', '/login', '/signUp', '/forgotPassword']} exact component={AuthPage}></PublicRoute>
-        <PrivateRoute path='/dashboard' component={DashboardPage}></PrivateRoute>
+        <ContentLayout>
+          <PrivateRoute path='/dashboard' component={DashboardPage}></PrivateRoute>
+        </ContentLayout>
         <Route path='*'>
           <Redirect to='/' />
         </Route>

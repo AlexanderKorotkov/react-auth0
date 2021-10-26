@@ -1,8 +1,8 @@
 import React from 'react';
-import AuthFooter from './AuthFooter';
-import classes from './AuthWrapper.module.css';
+import AuthFooter from '../pages/AuthPage/components/AuthFooter';
+import classes from './AuthLayout.module.css';
 
-const AuthWrapper = (props) => {
+const AuthLayout = (props) => {
   return (
     <section className={classes.container}>
       <div className={classes.imageWrapper}>
@@ -20,4 +20,4 @@ const AuthWrapper = (props) => {
   );
 };
 
-export default AuthWrapper;
+export default AuthLayout;

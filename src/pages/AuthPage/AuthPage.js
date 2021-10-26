@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from 'react';
 import { useLocation } from 'react-router-dom';
 import logo from '../../assets/img/logo.jpg';
-import AuthWrapper from './components/AuthWrapper';
+import AuthLayout from '../../layout/AuthLayout';
 import ForgotPassForm from './components/ForgotPassForm';
 import LoginForm from './components/LoginForm';
 import SignUpForm from './components/SignUpForm';
@@ -45,11 +45,11 @@ const AuthPage = () => {
   }, [location]);
 
   return (
-    <AuthWrapper pageData={pageData}>
+    <AuthLayout pageData={pageData}>
       {pageData.page === 'login' && <LoginForm />}
       {pageData.page === 'signUp' && <SignUpForm />}
       {pageData.page === 'forgotPassword' && <ForgotPassForm />}
-    </AuthWrapper>
+    </AuthLayout>
   );
 };
 
