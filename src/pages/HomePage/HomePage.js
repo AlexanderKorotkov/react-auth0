@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './HomePageContent.module.css';
+import classes from './HomePage.module.css';
 import { Redirect } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from 'components/UI/LoginButton';
