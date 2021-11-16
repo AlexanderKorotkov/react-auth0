@@ -1,0 +1,19 @@
+.container {
+  @apply container px-5 py-24 mx-auto;
+}
+
+.title {
+  @apply sm:text-3xl text-2xl font-medium text-center text-gray-900 mb-4;
+}
+
+.description {
+  @apply text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto;
+}
+
+.content {
+  @apply flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2;
+}
+
+.icon {
+  @apply bg-gray-100 rounded flex p-4 h-full items-center;
+}

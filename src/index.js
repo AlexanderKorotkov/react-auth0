@@ -3,11 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
-import { AuthContextProvider } from './store/auth-context';
+import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 
 import axios from 'axios';
-
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 axios.defaults.headers.common = {
   Authorization: null,
@@ -24,10 +23,16 @@ axios.interceptors.response.use(
 );
 
 ReactDOM.render(
-  <AuthContextProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Auth0Provider
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+      redirectUri={window.location.origin}
+      audience={process.env.AUTH0_AUDIENCE}
+      scope={process.env.AUTH0_SCOPE}
+    >
       <App />
-    </BrowserRouter>
-  </AuthContextProvider>,
+    </Auth0Provider>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
