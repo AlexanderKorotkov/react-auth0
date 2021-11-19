@@ -1,15 +1,16 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import classes from './SideBarIcon.module.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function SideBarIcon({ icon, text, redirectPath }) {
   const { logout } = useAuth0();
+  const navigate = useNavigate();
   const clickHandler = () => {
     if (text === 'Logout') {
       logout();
     }
-    return <Redirect push to={redirectPath} />;
+    navigate(redirectPath);
   };
 
   return (

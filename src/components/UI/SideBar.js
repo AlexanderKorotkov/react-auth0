@@ -9,7 +9,7 @@ const SideBar = () => {
   return (
     <div className={classes.sideBarContainer}>
       <SideBarIcon icon={<FaFire size='28' />} text='Dashboard' redirectPath='/dashboard' />
-      <SideBarIcon icon={<BsPlus size='32' />} text='Dashboard2' redirectPath='/dashboard' />
+      <SideBarIcon icon={<BsPlus size='32' />} text='Dashboard2' redirectPath='/test' />
       <SideBarIcon icon={<BsFillLightningFill size='20' />} text='Dashboard3' redirectPath='/dashboard' />
       <SideBarIcon icon={<FaPoo size='20' />} text='Dashboard4' redirectPath='/dashboard' />
       <SideBarIcon icon={<BsArrowBarLeft size='20' />} text='Logout' redirectPath='/' />

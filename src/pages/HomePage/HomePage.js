@@ -1,7 +1,5 @@
 import React from 'react';
 import classes from './HomePage.module.css';
-import { Redirect } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from 'components/UI/LoginButton';
 
 const dummy_data = [
@@ -32,15 +30,6 @@ const dummy_data = [
 ];
 
 const HomePage = () => {
-  const { isAuthenticated, isLoading } = useAuth0();
-
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
-
-  if (isAuthenticated) {
-    return <Redirect push to='/dashboard' />;
-  }
   return (
     <section className='text-gray-600 body-font'>
       <div className={classes.container}>
